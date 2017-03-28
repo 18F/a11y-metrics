@@ -1,10 +1,7 @@
-const path = require('path');
-const fs = require('fs');
 const GitHubApi = require('github');
 
-const mkdirpSync = require('./lib/mkdirp-sync');
+const cache = require('./lib/cache');
 
-const CACHE_DIR = path.join(__dirname, 'cache', 'github');
 const QUERY = 'accessibility OR a11y';
 
 const github = new GitHubApi({
@@ -18,28 +15,12 @@ const github = new GitHubApi({
 
 function getGithubStats(repo) {
   const [org, name] = repo.split('/');
-  const dirname = path.join(CACHE_DIR, org);
-  const filename = path.join(dirname, name);
 
-  if (fs.existsSync(filename)) {
-    return Promise.resolve(JSON.parse(fs.readFileSync(filename, {
-      encoding: 'utf-8'
-    })));
-  }
-
-  return new Promise((resolve, reject) => {
+  return cache.get(['github', org, name], (cb) => {
     github.search.issues({
       q: `repo:${org}/${name} ${QUERY}`,
       per_page: 100,
-    }, (err, res) => {
-      if (err) {
-        return reject(err);
-      }
-
-      mkdirpSync(dirname);
-      fs.writeFileSync(filename, JSON.stringify(res, null, 2));
-      resolve();
-    });
+    }, cb); 
   });
 }
 

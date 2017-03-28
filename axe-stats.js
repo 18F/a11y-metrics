@@ -1,33 +1,20 @@
-const path = require('path');
-const fs = require('fs');
 const AxeBuilder = require('axe-webdriverjs');
 
+const cache = require('./lib/cache');
 const getWebdriver = require('./lib/webdriver');
-const mkdirpSync = require('./lib/mkdirp-sync');
-
-const CACHE_DIR = path.join(__dirname, 'cache', 'axe');
 
 function getAxeStats(domain) {
-  const filename = path.join(CACHE_DIR, `${domain}.json`);
-  if (fs.existsSync(filename)) {
-    return Promise.resolve(JSON.parse(fs.readFileSync(filename, {
-      encoding: 'utf-8'
-    })));
-  }
-
-  return getWebdriver().then(driver => {
+  return cache.get(['axe', domain], () => getWebdriver().then(driver => {
     return driver.get(`https://${domain}/`).then(() => {
       const axe = AxeBuilder(driver);
 
       return new Promise((resolve, reject) => {
         axe.analyze(results => {
-          mkdirpSync(CACHE_DIR);
-          fs.writeFileSync(filename, JSON.stringify(results, null, 2));
           resolve(results);
         });
       });
     });
-  });
+  }));
 }
 
 module.exports = getAxeStats;
