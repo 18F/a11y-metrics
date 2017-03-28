@@ -9,6 +9,7 @@ You'll need [Docker][].
 docker-compose pull
 docker-compose run app yarn
 docker-compose run app node axe-stats.js
+docker-compose run app node github-stats.js
 ```
 
 This is very much a **work in progress**. Right now we're just obtaining
