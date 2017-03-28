@@ -24,18 +24,18 @@ function getGithubStats(repo) {
   });
 }
 
+async function main() {
+  const websites = require('./websites.json');
+
+  for (website of websites) {
+    console.log(`Obtaining GitHub stats for ${website.repo}.`);
+
+    await getGithubStats(website.repo);
+  }
+}
+
 if (module.parent === null) {
-  let promise = Promise.resolve();
-
-  require('./websites.json').forEach(function(website) {
-    promise = promise.then(() => {
-      console.log(`Obtaining GitHub stats for ${website.repo}.`);
-
-      return getGithubStats(website.repo);
-    });
-  });
-
-  promise.catch(err => {
+  main().catch(err => {
     console.log(err);
     process.exit(1);
   });
