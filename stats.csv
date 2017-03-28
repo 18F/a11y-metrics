@@ -1,11 +1,11 @@
-Domain,GitHub Repository,GitHub issues mentioning accessibility,aXe violations on front page
-beta.fec.gov,18F/fec,8,4
-calc.gsa.gov,18F/calc,26,2
-micropurchase.18f.gov,18F/micropurchase,6,1
-18f.gsa.gov,18F/18f.gsa.gov,93,1
-crime-data-explorer.fr.cloud.gov,18F/crime-data-explorer,7,1
-methods.18f.gov,18F/methods,1,0
-federalist.18f.gov,18F/federalist,1,1
-pulse.cio.gov,18F/pulse,140,2
-useiti.doi.gov,18F/doi-extractives-data,31,4
-standards.usa.gov,18F/web-design-standards,194,0
+Domain,GitHub Repository,GitHub issues mentioning accessibility,aXe violations on front page,aXe passes on front page
+beta.fec.gov,18F/fec,8,4,23
+calc.gsa.gov,18F/calc,26,2,31
+micropurchase.18f.gov,18F/micropurchase,6,1,18
+18f.gsa.gov,18F/18f.gsa.gov,93,1,20
+crime-data-explorer.fr.cloud.gov,18F/crime-data-explorer,7,1,19
+methods.18f.gov,18F/methods,1,0,22
+federalist.18f.gov,18F/federalist,1,1,23
+pulse.cio.gov,18F/pulse,140,2,18
+useiti.doi.gov,18F/doi-extractives-data,31,4,23
+standards.usa.gov,18F/web-design-standards,194,0,23

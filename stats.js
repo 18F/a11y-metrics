@@ -23,7 +23,8 @@ async function main() {
     'Domain',
     'GitHub Repository',
     'GitHub issues mentioning accessibility',
-    'aXe violations on front page'
+    'aXe violations on front page',
+    'aXe passes on front page'
   ]];
 
   for (website of websites) {
@@ -34,7 +35,8 @@ async function main() {
       website.domain,
       website.repo,
       github.data.total_count,
-      axe.violations.length
+      axe.violations.length,
+      axe.passes.length
     ]);
   }
 
