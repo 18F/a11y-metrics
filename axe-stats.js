@@ -3,6 +3,7 @@ const fs = require('fs');
 const AxeBuilder = require('axe-webdriverjs');
 
 const getWebdriver = require('./lib/webdriver');
+const mkdirpSync = require('./lib/mkdirp-sync');
 
 const CACHE_DIR = path.join(__dirname, 'cache', 'axe');
 
@@ -20,6 +21,7 @@ function getAxeStats(domain) {
 
       return new Promise((resolve, reject) => {
         axe.analyze(results => {
+          mkdirpSync(CACHE_DIR);
           fs.writeFileSync(filename, JSON.stringify(results, null, 2));
           resolve(results);
         });
