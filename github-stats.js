@@ -5,6 +5,7 @@ const GitHubApi = require('github');
 const mkdirpSync = require('./lib/mkdirp-sync');
 
 const CACHE_DIR = path.join(__dirname, 'cache', 'github');
+const QUERY = 'accessibility OR a11y';
 
 const github = new GitHubApi({
   protocol: 'https',
@@ -28,7 +29,7 @@ function getGithubStats(repo) {
 
   return new Promise((resolve, reject) => {
     github.search.issues({
-      q: `repo:${org}/${name} accessibility OR a11y`,
+      q: `repo:${org}/${name} ${QUERY}`,
       per_page: 100,
     }, (err, res) => {
       if (err) {
