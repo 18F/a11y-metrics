@@ -33,11 +33,11 @@ module.exports = getAxeStats;
 if (module.parent === null) {
   let promise = Promise.resolve();
 
-  require('./websites.json').forEach(function(domain) {
+  require('./websites.json').forEach(function(website) {
     promise = promise.then(() => {
-      console.log(`Obtaining axe-core stats for ${domain}.`);
+      console.log(`Obtaining axe-core stats for ${website.domain}.`);
 
-      return getAxeStats(domain);
+      return getAxeStats(website.domain);
     });
   });
 

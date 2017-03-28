@@ -1,4 +1,10 @@
 [
-  "beta.fec.gov",
-  "calc.gsa.gov"
+  {
+    "domain": "beta.fec.gov",
+    "repo": "18F/fec"
+  },
+  {
+    "domain": "calc.gsa.gov",
+    "repo": "18F/calc"
+  }
 ]
