@@ -6,5 +6,37 @@
   {
     "domain": "calc.gsa.gov",
     "repo": "18F/calc"
+  },
+  {
+    "domain": "micropurchase.18f.gov",
+    "repo": "18F/micropurchase"
+  },
+  {
+    "domain": "18f.gsa.gov",
+    "repo": "18F/18f.gsa.gov"
+  },
+  {
+    "domain": "crime-data-explorer.fr.cloud.gov",
+    "repo": "18F/crime-data-explorer"
+  },
+  {
+    "domain": "methods.18f.gov",
+    "repo": "18F/methods"
+  },
+  {
+    "domain": "federalist.18f.gov",
+    "repo": "18F/federalist"
+  },
+  {
+    "domain": "pulse.cio.gov",
+    "repo": "18F/pulse"
+  },
+  {
+    "domain": "useiti.doi.gov",
+    "repo": "18F/doi-extractives-data"
+  },
+  {
+    "domain": "standards.usa.gov",
+    "repo": "18F/web-design-standards"
   }
 ]
