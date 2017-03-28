@@ -2,6 +2,7 @@
   "dependencies": {
     "axe-core": "^2.1.7",
     "axe-webdriverjs": "^0.5.0",
+    "csv-stringify": "^1.0.4",
     "github": "^9.2.0",
     "selenium-webdriver": "^3.3.0"
   }

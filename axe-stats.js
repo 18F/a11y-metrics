@@ -5,6 +5,8 @@ const getWebdriver = require('./lib/webdriver');
 
 function getAxeStats(domain) {
   return cache.get(['axe', domain], async function() {
+    console.log(`Obtaining axe-core stats for ${domain}.`);
+
     const driver = await getWebdriver();
 
     await driver.get(`https://${domain}/`);
@@ -25,7 +27,7 @@ async function main() {
   const websites = require('./websites.json');
 
   for (website of websites) {
-    console.log(`Obtaining axe-core stats for ${website.domain}.`);
+    console.log(`Processing ${website.domain}.`);
 
     await getAxeStats(website.domain);
   }

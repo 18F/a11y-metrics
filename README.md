@@ -8,13 +8,10 @@ You'll need [Docker][].
 ```
 docker-compose pull
 docker-compose run app yarn
-docker-compose run app node axe-stats.js
-docker-compose run app node github-stats.js
+docker-compose run app node stats.js
 ```
 
-This is very much a **work in progress**. Right now we're just obtaining
-metrics and caching them; we still need to export the information in
-a format that is nice and human-readable.
+This will output [stats.csv](stats.csv).
 
 ## Adding new 18F projects to track
 
