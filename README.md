@@ -17,4 +17,10 @@ This will output [stats.csv](stats.csv).
 
 Just add an entry to `websites.json`.
 
+## Clearing cached data
+
+All cached data is placed in the `cache` subdirectory. You can delete it
+entirely to reset the whole cache, or delete individual subdirectories
+or files within it to reset a subset of the cache.
+
 [Docker]: https://docker.com/
