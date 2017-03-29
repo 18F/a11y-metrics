@@ -5,5 +5,11 @@
     "csv-stringify": "^1.0.4",
     "github": "^9.2.0",
     "selenium-webdriver": "^3.3.0"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.42.0"
+  },
+  "scripts": {
+    "test": "flow"
   }
 }

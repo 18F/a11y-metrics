@@ -1,7 +1,7 @@
 version: '2.1'
 services:
   app:
-    image: node:7.7.4
+    build: .
     volumes:
       - .:/app
       - node_modules:/app/node_modules/
