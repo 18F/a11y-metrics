@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "flow-bin": "^0.42.0",
+    "flow-typed": "^2.0.0",
     "flow-watch": "^1.1.1"
   },
   "scripts": {
