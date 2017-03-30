@@ -52,7 +52,7 @@ async function main() {
 
 
   repos = repos.filter(isInterestingRepo)
-    .map(r => `${r.name} - ${r.homepage}`);
+    .map(r => `* ${r.name} - ${r.homepage}`);
 
   console.log(repos.join('\n'));
   console.log(`\n${repos.length} interesting repos found in ${ORG}.`);
