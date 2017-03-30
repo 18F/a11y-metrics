@@ -34,10 +34,28 @@ async function getGithubRepos(org) {
 
 module.exports = getGithubRepos;
 
+function isInterestingRepo(r) {
+  const MIN_OPEN_ISSUES = 20;
+  const MIN_STARS = 30;
+  const MIN_LAST_PUSH_YEAR = new Date().getFullYear() - 1;
+
+  return !r.fork && r.homepage &&
+         new Date(r.pushed_at).getFullYear() >= MIN_LAST_PUSH_YEAR &&
+         (r.open_issues_count >= MIN_OPEN_ISSUES ||
+          r.stargazers_count >= MIN_STARS);
+}
+
 async function main() {
   console.log(`Processing ${ORG}.`);
 
-  await getGithubRepos(ORG);
+  let repos = await getGithubRepos(ORG);
+
+
+  repos = repos.filter(isInterestingRepo)
+    .map(r => `${r.name} - ${r.homepage}`);
+
+  console.log(repos.join('\n'));
+  console.log(`\n${repos.length} interesting repos found in ${ORG}.`);
 }
 
 if (module.parent === null) {
