@@ -3,5 +3,7 @@
 [include]
 
 [libs]
+./flow-typed
+./node_modules/github/lib/index.js.flow
 
 [options]
