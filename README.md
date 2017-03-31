@@ -27,9 +27,11 @@ or files within it to reset a subset of the cache.
 
 ## Testing
 
-Unfortunately, this project does not yet have any unit tests.
+We use [Jest][] for tests; tests are in the `test` subdirectory. Run
+`docker-compose run app jest --watch` to run the tests and continuously
+watch for changes.
 
-However, it does use [Flow's comment syntax][flow] for strong typing,
+We also use [Flow's comment syntax][flow] for strong typing,
 and `docker-compose run app npm test` will fail if any errors are
 reported by Flow.
 
@@ -38,3 +40,4 @@ For quick feedback on Flow's type checking, consider running
 
 [Docker]: https://docker.com/
 [flow]: https://flowtype.org/en/docs/types/comments/
+[Jest]: http://facebook.github.io/jest/
