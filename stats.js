@@ -49,8 +49,5 @@ async function main() {
 }
 
 if (module.parent === null) {
-  main().catch(err => {
-    console.log(err);
-    process.exit(1);
-  });
+  require('./lib/run-script')(main);
 }
