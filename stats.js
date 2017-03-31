@@ -3,7 +3,7 @@ const cbStringify = require('csv-stringify');
 
 const getAxeStats = require('./lib/axe-stats');
 const getGithubStats = require('./lib/github-stats');
-const websites = require('./websites.json');
+const getWebsites = require('./lib/websites');
 
 const OUTPUT_CSV = 'stats.csv';
 
@@ -26,6 +26,8 @@ async function main() {
     'aXe violations on front page',
     'aXe passes on front page'
   ]];
+
+  const websites = await getWebsites();
 
   for (website of websites) {
     const github = await getGithubStats(website.repo);
