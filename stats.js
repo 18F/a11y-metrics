@@ -1,3 +1,5 @@
+// @flow
+
 const fs = require('fs');
 const cbStringify = require('csv-stringify');
 
@@ -7,7 +9,7 @@ const getWebsites = require('./lib/websites');
 
 const OUTPUT_CSV = 'stats.csv';
 
-function stringify(input) {
+function stringify(input /*: Array<any> */) /*: Promise<string> */ {
   return new Promise((resolve, reject) => {
     cbStringify(input, (err, output) => {
       if (err) {
@@ -19,7 +21,7 @@ function stringify(input) {
 }
 
 async function main() {
-  rows = [[
+  const rows = [[
     'Homepage',
     'GitHub Repository',
     'GitHub issues (open and closed) mentioning accessibility',
@@ -29,7 +31,7 @@ async function main() {
 
   const websites = await getWebsites();
 
-  for (website of websites) {
+  for (let website of websites) {
     const github = await getGithubStats(website.repo);
     const axe = await getAxeStats(website.homepage);
 
