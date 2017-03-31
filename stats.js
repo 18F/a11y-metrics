@@ -22,7 +22,7 @@ async function main() {
   rows = [[
     'Domain',
     'GitHub Repository',
-    'GitHub issues mentioning accessibility',
+    'GitHub issues (open and closed) mentioning accessibility',
     'aXe violations on front page',
     'aXe passes on front page'
   ]];
