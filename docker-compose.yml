@@ -4,13 +4,17 @@ services:
     build: .
     volumes:
       - .:/app
+      - home:/home/
       - node_modules:/app/node_modules/
     working_dir: /app
+    entrypoint: node /app/lib/docker/entrypoint.js
     links:
       - selenium
     environment:
       - SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub
       - SELENIUM_BROWSER=chrome
+      - HOST_USER=a11y_user
+      - USER_OWNED_DIRS=/app/node_modules
   selenium:
     image: selenium/standalone-chrome:3.2.0
     volumes:
@@ -19,3 +23,4 @@ services:
       - 4444:4444
 volumes:
   node_modules:
+  home:
