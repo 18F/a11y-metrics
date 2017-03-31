@@ -1,8 +1,8 @@
 const fs = require('fs');
 const cbStringify = require('csv-stringify');
 
-const getAxeStats = require('./axe-stats');
-const getGithubStats = require('./github-stats');
+const getAxeStats = require('./lib/axe-stats');
+const getGithubStats = require('./lib/github-stats');
 const websites = require('./websites.json');
 
 const OUTPUT_CSV = 'stats.csv';
@@ -20,7 +20,7 @@ function stringify(input) {
 
 async function main() {
   rows = [[
-    'Domain',
+    'Homepage',
     'GitHub Repository',
     'GitHub issues (open and closed) mentioning accessibility',
     'aXe violations on front page',
@@ -29,10 +29,10 @@ async function main() {
 
   for (website of websites) {
     const github = await getGithubStats(website.repo);
-    const axe = await getAxeStats(website.domain);
+    const axe = await getAxeStats(website.homepage);
 
     rows.push([
-      website.domain,
+      website.homepage,
       website.repo,
       github.data.total_count,
       axe.violations.length,
