@@ -14,7 +14,7 @@ docker-compose run app npm run copy:vendor
 docker-compose run app node stats.js
 ```
 
-This will output [stats.csv](stats.csv) and `static/index.html`.
+This will output [`stats.csv`](stats.csv) and `static/index.html`.
 
 ## Adding new 18F projects to track
 
