@@ -13,7 +13,7 @@ const getWebsites = require('./lib/websites');
 const Dashboard = require('./lib/components/dashboard');
 
 const OUTPUT_CSV = 'stats.csv';
-const OUTPUT_HTML = 'index.html';
+const OUTPUT_HTML = 'static/index.html';
 
 function stringify(input /*: Array<any> */) /*: Promise<string> */ {
   return new Promise((resolve, reject) => {

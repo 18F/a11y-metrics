@@ -1,5 +1,5 @@
 cache/
 jest/
-vendor/
 node_modules/
-index.html
+static/vendor/
+static/index.html

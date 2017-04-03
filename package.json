@@ -19,7 +19,7 @@
     "jest": "^19.0.2"
   },
   "scripts": {
-    "copy:vendor": "mkdir -p vendor/uswds && cp -R node_modules/uswds/dist/* vendor/uswds/",
+    "copy:vendor": "mkdir -p static/vendor/uswds && cp -R node_modules/uswds/dist/* static/vendor/uswds/",
     "flow:watch": "flow-watch --ignore node_modules/ -e js,jsx --watch '*.jsx' --watch '*.js' --watch .flowconfig",
     "test": "jest && flow"
   }
