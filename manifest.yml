@@ -1,0 +1,7 @@
+applications:
+- name: a11y
+  memory: 64M
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  env:
+    FORCE_HTTPS: true
+  path: static

@@ -14,7 +14,7 @@ docker-compose run app npm run copy:vendor
 docker-compose run app node stats.js
 ```
 
-This will output [stats.csv](stats.csv) and `index.html`.
+This will output [stats.csv](stats.csv) and `static/index.html`.
 
 ## Adding new 18F projects to track
 
@@ -49,6 +49,13 @@ reported by Flow.
 For quick feedback on Flow's type checking, consider running
 `docker-compose run app npm run flow:watch`.
 
+## Deployment
+
+Currently deployment is done via the
+[cloud.gov staticfiles buildpack][cg-static]. You can deploy the site
+by running `cf push`.
+
 [Docker]: https://docker.com/
 [flow]: https://flowtype.org/en/docs/types/comments/
 [Jest]: http://facebook.github.io/jest/
+[cg-static]: https://cloud.gov/docs/apps/static/
