@@ -23,6 +23,9 @@ by iterating through all the GitHub repositories in the 18F organization
 have a homepage set, along with a minimum number of open issues or
 stars.
 
+For more details on this criteria, and on tweaking its parameters,
+see `lib/config.js`.
+
 We may add an explicit mechanism to allow specific projects to be
 tracked in the future.
 
