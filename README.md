@@ -15,13 +15,6 @@ docker-compose run app node stats.js
 
 This will output [stats.csv](stats.csv).
 
-## Dealing with errors
-
-The script may crash due to exceeding GitHub's API rate limit. If
-this happens, just re-run the script after waiting a bit; because it's
-caching GitHub's responses, it will go further every time you
-re-run the script.
-
 ## Adding new 18F projects to track
 
 Currently, the list of 18F projects is actually automatically generated
