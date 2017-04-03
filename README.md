@@ -46,7 +46,7 @@ and `docker-compose run app npm test` will fail if any errors are
 reported by Flow.
 
 For quick feedback on Flow's type checking, consider running
-`docker-compose run app flow-watch`.
+`docker-compose run app npm run flow:watch`.
 
 [Docker]: https://docker.com/
 [flow]: https://flowtype.org/en/docs/types/comments/

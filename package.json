@@ -2,8 +2,12 @@
   "dependencies": {
     "axe-core": "^2.1.7",
     "axe-webdriverjs": "^0.5.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-register": "^6.24.0",
     "csv-stringify": "^1.0.4",
     "github": "^9.2.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "selenium-webdriver": "^3.3.0",
     "slugify": "^1.1.0"
   },
@@ -14,6 +18,7 @@
     "jest": "^19.0.2"
   },
   "scripts": {
+    "flow:watch": "flow-watch --ignore node_modules/ -e js,jsx --watch '*.jsx' --watch '*.js' --watch .flowconfig",
     "test": "jest && flow"
   }
 }
