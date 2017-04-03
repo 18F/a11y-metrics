@@ -1,0 +1,5 @@
+@import url(./vendor/uswds/css/uswds.min.css);
+
+html {
+  padding: 0 2em;
+}

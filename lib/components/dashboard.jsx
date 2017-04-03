@@ -1,8 +1,9 @@
 // @flow
 
 const React = require('react');
+const urlParse = require('url').parse;
 
-const { QUERY } = require('../config');
+const { ORG, QUERY } = require('../config');
 
 /*::
 import type {Website} from '../websites';
@@ -15,6 +16,21 @@ type Record = {
 };
 */
 
+function shortenUrl(url /*: string */) /*: string */ {
+  const info = urlParse(url);
+
+  if (!(info.hostname && info.pathname))
+    return url;
+
+  let short = info.hostname + info.pathname;
+
+  if (/\/$/.test(short)) {
+    short = short.slice(0, -1);
+  }
+
+  return short;
+}
+
 class Row extends React.Component {
   /*::
   props: {
@@ -26,6 +42,7 @@ class Row extends React.Component {
 
   render() {
     const homepage = this.props.website.homepage;
+    const shortHomepage = shortenUrl(homepage);
     const repo = this.props.website.repo;
     const repoUrl = `https://github.com/${repo}`;
     const q = encodeURIComponent(QUERY);
@@ -33,7 +50,7 @@ class Row extends React.Component {
 
     return (
       <tr>
-        <td><a href={homepage}>{homepage}</a></td>
+        <td><a href={homepage}>{shortHomepage}</a></td>
         <td><a href={repoUrl}>{repo}</a></td>
         <td><a href={issuesUrl}>{this.props.issueCount}</a></td>
         <td>{this.props.axeStats.violations.length}</td>
@@ -51,11 +68,18 @@ class Dashboard extends React.Component {
   */
 
   render() {
+    const title = `${ORG} Accessibility dashboard`;
+
     return (
       <html>
-        <head></head>
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="stylesheet" href="style.css" />
+          <title>{title}</title>
+        </head>
         <body>
-          <h1>Accessibility dashboard</h1>
+          <h1>{title}</h1>
           <table>
             <thead>
               <tr>

@@ -10,10 +10,11 @@ You'll need [Docker][].
 ```
 docker-compose pull
 docker-compose run app yarn
+docker-compose run app npm run copy:vendor
 docker-compose run app node stats.js
 ```
 
-This will output [stats.csv](stats.csv).
+This will output [stats.csv](stats.csv) and `index.html`.
 
 ## Adding new 18F projects to track
 
