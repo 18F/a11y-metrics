@@ -97,7 +97,7 @@ class Dashboard extends React.Component {
               The <strong>GitHub a11y issues</strong> count is found by searching for both open and closed issues in a project's repository matching the query <code>{QUERY}</code>.
             </li>
             <li>
-              THe <strong>aXe violations</strong> and <strong>aXe passes</strong> counts are found by visiting a project's homepage using Deque Systems' <a href="https://github.com/dequelabs/axe-core">aXe-core</a> tool.
+              The <strong>aXe violations</strong> and <strong>aXe passes</strong> counts are found by visiting a project's homepage using Deque Systems' <a href="https://github.com/dequelabs/axe-core">aXe-core</a> tool.
               {' '}
               For more detailed information, please visit the project's homepage using the <a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">aXe Chrome plugin</a>.
             </li>
