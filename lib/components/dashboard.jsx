@@ -80,6 +80,9 @@ class Dashboard extends React.Component {
         </head>
         <body>
           <h1>{title}</h1>
+          <p>
+            This dashboard is accurate as of {new Date().toLocaleDateString()}.
+          </p>
           <table>
             <thead>
               <tr>
