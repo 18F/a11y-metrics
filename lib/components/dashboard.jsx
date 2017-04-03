@@ -71,7 +71,7 @@ class Dashboard extends React.Component {
     const title = `${ORG} Accessibility dashboard`;
 
     return (
-      <html>
+      <html lang="en">
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
