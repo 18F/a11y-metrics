@@ -1,9 +1,9 @@
 // @flow
 
 const React = require('react');
-const urlParse = require('url').parse;
 
 const { QUERY } = require('../config');
+const { shortenUrl } = require('../util');
 
 /*::
 import type {Website} from '../websites';
@@ -15,21 +15,6 @@ export type Record = {
   axeStats: AxeStats;
 };
 */
-
-function shortenUrl(url /*: string */) /*: string */ {
-  const info = urlParse(url);
-
-  if (!(info.hostname && info.pathname))
-    return url;
-
-  let short = info.hostname + info.pathname;
-
-  if (/\/$/.test(short)) {
-    short = short.slice(0, -1);
-  }
-
-  return short;
-}
 
 class Row extends React.Component {
   /*::
