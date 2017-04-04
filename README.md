@@ -25,10 +25,23 @@ have a homepage set, along with a minimum number of open issues or
 stars.
 
 For more details on this criteria, and on tweaking its parameters,
-see [`lib/config.js`](lib/config.js).
+see [`lib/config.js`][].
 
 We may add an explicit mechanism to allow specific projects to be
 tracked in the future.
+
+## Environment-controlled configuration options
+
+Some configuration options can be modified via environment variables.
+
+During development, this is most easily done by creating a `.env` file
+containing name-value pairs, e.g.:
+
+```
+GITHUB_API_TOKEN=blarg
+```
+
+For more details on available configuration options, see [`lib/config.js`][].
 
 ## Clearing cached data
 
@@ -59,3 +72,4 @@ by running `cf push`.
 [flow]: https://flowtype.org/en/docs/types/comments/
 [Jest]: http://facebook.github.io/jest/
 [cg-static]: https://cloud.gov/docs/apps/static/
+[`lib/config.js`]: lib/config.js

@@ -3,3 +3,4 @@ jest/
 node_modules/
 static/vendor/
 static/index.html
+.env
