@@ -10,11 +10,11 @@ You'll need [Docker][].
 ```
 docker-compose pull
 docker-compose run app yarn
-docker-compose run app npm run copy:vendor
-docker-compose run app node stats.js
+docker-compose run app yarn build
 ```
 
-This will output [`stats.csv`](stats.csv) and `static/index.html`.
+This will output [`stats.csv`](stats.csv) and `static/index.html`, as
+well as an accompanying JS bundle for progressive enhancement.
 
 ## Adding new 18F projects to track
 
@@ -56,11 +56,16 @@ We use [Jest][] for tests; tests are in the `test` subdirectory. Run
 watch for changes.
 
 We also use [Flow's comment syntax][flow] for strong typing,
-and `docker-compose run app npm test` will fail if any errors are
+and `docker-compose run app yarn test` will fail if any errors are
 reported by Flow.
 
 For quick feedback on Flow's type checking, consider running
-`docker-compose run app npm run flow:watch`.
+`docker-compose run app yarn flow:watch`.
+
+## Browser development
+
+To automatically rebuild the browser-side JS bundle whenever you
+change the source, run `docker-compose run app webpack --watch`.
 
 ## Deployment
 

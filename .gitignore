@@ -3,4 +3,6 @@ jest/
 node_modules/
 static/vendor/
 static/index.html
+static/bundle.js
+static/records.json
 .env

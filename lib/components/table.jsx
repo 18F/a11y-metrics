@@ -3,16 +3,31 @@
 const React = require('react');
 
 const { QUERY } = require('../config');
-const { shortenUrl } = require('../util');
+const { shortenUrl, cmpStr } = require('../util');
+const {
+  SORT_HOME,
+  SORT_REPO,
+  SORT_ISSU,
+  SORT_AXEV,
+  SORT_AXEP,
+} = require('./history-sync');
 
 /*::
 import type {Website} from '../websites';
-import type {AxeStats} from '../axe-stats';
+import type {TableSort, TableSortConfig} from './history-sync';
+
+type BasicAxeStats = {
+  violations: Array<{
+    kind: string,
+    nodeCount: number
+  }>;
+  passes: number;
+};
 
 export type Record = {
   website: Website;
   issueCount: number;
-  axeStats: AxeStats;
+  axeStats: BasicAxeStats;
 };
 */
 
@@ -21,7 +36,7 @@ class Row extends React.Component {
   props: {
     website: Website;
     issueCount: number;
-    axeStats: AxeStats;
+    axeStats: BasicAxeStats;
   };
   */
 
@@ -32,34 +47,167 @@ class Row extends React.Component {
     const repoUrl = `https://github.com/${repo}`;
     const q = encodeURIComponent(QUERY);
     const issuesUrl = `https://github.com/${repo}/search?q=${q}&type=Issues`;
+    const violationTip = this.props.axeStats.violations.map(v => (
+      v.nodeCount === 1 ? v.kind : `${v.kind} (${v.nodeCount} nodes)`
+    )).join(', ');
 
     return (
       <tr>
         <td><a href={homepage}>{shortHomepage}</a></td>
         <td><a href={repoUrl}>{repo}</a></td>
         <td><a href={issuesUrl}>{this.props.issueCount}</a></td>
-        <td>{this.props.axeStats.violations.length}</td>
-        <td>{this.props.axeStats.passes.length}</td>
+        <td title={violationTip}>{this.props.axeStats.violations.length}</td>
+        <td>{this.props.axeStats.passes}</td>
       </tr>
     );
   }
 }
 
+/*::
+type HeaderProps = {
+  sort: TableSort;
+  currSort: TableSort;
+  isDescending: boolean;
+  onSort: (TableSort) => void;
+  isEnhanced: boolean;
+  children?: any;
+};
+*/
+
+function Header(props /*: HeaderProps */) {
+  if (!props.isEnhanced) {
+    return <th>{props.children}</th>;
+  }
+
+  const handleClick = () => props.onSort(props.sort);
+  const isSorted = props.sort === props.currSort;
+  let ariaLabel;
+
+  if (isSorted) {
+    if (props.isDescending) {
+      ariaLabel = "sorted descending, select to sort ascending";
+    } else {
+      ariaLabel = "sorted ascending, select to sort descending";
+    }
+  } else {
+    ariaLabel = "unsorted, select to sort ascending";
+  }
+
+  return (
+    <th>
+      <div className="sortable">
+        <div className="sort-toggler">
+          <button onClick={handleClick}
+                  title={ariaLabel} aria-label={ariaLabel}>
+            {props.children}
+          </button>
+        </div>
+        <span className="sort-indicator" data-is-sorted={isSorted}
+              data-is-descending={props.isDescending}
+              aria-hidden="true" />
+      </div>
+    </th>
+  );
+}
+
+/*::
+type TableProps = {
+  records: Array<Record>;
+  isEnhanced: boolean;
+  sortBy: TableSort;
+  isDescending: boolean;
+  onSortChange: (TableSortConfig) => void;
+};
+*/
+
 class Table extends React.Component {
+  /*::
+  props: TableProps;
+
+  handleSort: (TableSort) => void;
+  */
+
+  constructor(props /*: TableProps */) {
+    super(props);
+
+    this.handleSort = sortBy => {
+      if (this.props.sortBy === sortBy) {
+        this.props.onSortChange({
+          sortBy,
+          isDescending: !this.props.isDescending
+        });
+      } else {
+        this.props.onSortChange({
+          sortBy,
+          isDescending: false
+        });
+      }
+    };
+  }
+
+  sortRecords() {
+    const records = this.props.records.slice();
+
+    switch (this.props.sortBy) {
+      case SORT_HOME:
+        records.sort((a, b) => cmpStr(a.website.homepage,
+                                      b.website.homepage));
+        break;
+      case SORT_REPO:
+        records.sort((a, b) => cmpStr(a.website.repo, b.website.repo));
+        break;
+      case SORT_ISSU:
+        records.sort((a, b) => (a.issueCount - b.issueCount));
+        break;
+      case SORT_AXEV:
+        records.sort((a, b) => (a.axeStats.violations.length -
+                                b.axeStats.violations.length));
+        break;
+      case SORT_AXEP:
+        records.sort((a, b) => (a.axeStats.passes -
+                                b.axeStats.passes));
+        break;
+    }
+
+    if (this.props.isDescending) {
+      records.reverse();
+    }
+
+    return records;
+  }
+
   render() {
+    const records = this.sortRecords();
+    const headerProps = {
+      currSort: this.props.sortBy,
+      isDescending: this.props.isDescending,
+      onSort: this.handleSort,
+      isEnhanced: this.props.isEnhanced
+    };
+
     return (
       <table>
         <thead>
           <tr>
-            <th>Homepage</th>
-            <th>GitHub repository</th>
-            <th>GitHub a11y issues</th>
-            <th>aXe violations</th>
-            <th>aXe passes</th>
+            <Header sort={SORT_HOME} {...headerProps}>
+              Homepage
+            </Header>
+            <Header sort={SORT_REPO} {...headerProps}>
+              GitHub repository
+            </Header>
+            <Header sort={SORT_ISSU} {...headerProps}>
+              GitHub a11y issues
+            </Header>
+            <Header sort={SORT_AXEV} {...headerProps}>
+              aXe violations
+            </Header>
+            <Header sort={SORT_AXEP} {...headerProps}>
+              aXe passes
+            </Header>
           </tr>
         </thead>
         <tbody>
-          {this.props.records.map(record => 
+          {records.map(record =>
             <Row key={record.website.repo} {...record}/>
           )}
         </tbody>

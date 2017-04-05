@@ -3,38 +3,69 @@
 const React = require('react');
 const urlParse = require('url').parse;
 
+const {
+  HistorySync,
+  DEFAULT_SORT,
+  DEFAULT_IS_DESCENDING
+} = require('./history-sync');
 const Preamble = require('./preamble');
 const Table = require('./table');
-const { ORG } = require('../config');
 
 /*::
 import type {Record} from './table';
+import type {TableSort, TableSortConfig} from './history-sync';
+
+type DashboardProps = {
+  title: string;
+  createdAt: string;
+  records: Array<Record>;
+};
+
+type DashboardState = {
+  mounted: boolean;
+  sortBy: TableSort;
+  isDescending: boolean;
+};
 */
 
 class Dashboard extends React.Component {
   /*::
-  props: {
-    records: Array<Record>
-  };
+  props: DashboardProps;
+  state: DashboardState;
+
+  handleSortChange: (TableSortConfig) => void;
   */
 
-  render() {
-    const title = `${ORG} Accessibility dashboard`;
+  constructor(props /*: DashboardProps */) {
+    super(props);
+    this.state = {
+      mounted: false,
+      sortBy: DEFAULT_SORT,
+      isDescending: DEFAULT_IS_DESCENDING
+    };
+    this.handleSortChange = sort => {
+      this.setState(sort);
+    };
+  }
 
+  componentDidMount() {
+    this.setState({ mounted: true });
+  }
+
+  render() {
     return (
-      <html lang="en">
-        <head>
-          <meta charset="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="stylesheet" href="style.css" />
-          <title>{title}</title>
-        </head>
-        <body>
-          <h1>{title}</h1>
-          <Preamble />
-          <Table records={this.props.records} />
-        </body>
-      </html>
+      <div>
+        <HistorySync sortBy={this.state.sortBy}
+                     isDescending={this.state.isDescending}
+                     onChange={this.handleSortChange} />
+        <h1>{this.props.title}</h1>
+        <Preamble createdAt={this.props.createdAt} />
+        <Table sortBy={this.state.sortBy}
+               isDescending={this.state.isDescending}
+               onSortChange={this.handleSortChange}
+               isEnhanced={this.state.mounted}
+               records={this.props.records} />
+      </div>
     );
   }
 }

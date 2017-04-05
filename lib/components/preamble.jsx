@@ -5,6 +5,10 @@ const React = require('react');
 const { ORG, QUERY } = require('../config');
 
 class Preamble extends React.Component {
+  /*::
+  props: { createdAt: string };
+  */
+
   render() {
     return (
       <div>
@@ -16,7 +20,7 @@ class Preamble extends React.Component {
         </p>
         <ul>
           <li>
-            This dashboard is accurate as of {new Date().toLocaleDateString()}.
+            This dashboard is accurate as of {new Date(this.props.createdAt).toLocaleDateString()}.
           </li>
           <li>
             For more details on how repositories are chosen, see the <a href="https://github.com/18F/a11y-metrics#readme">GitHub README</a>.

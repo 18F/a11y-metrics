@@ -11,9 +11,12 @@ const getAxeStats = require('./lib/axe-stats');
 const getGithubStats = require('./lib/github-stats');
 const getWebsites = require('./lib/websites');
 const Dashboard = require('./lib/components/dashboard');
+const StaticPage = require('./lib/components/static-page');
 
+const { TITLE, ELEMENT_ID } = require('./lib/config');
 const OUTPUT_CSV = 'stats.csv';
 const OUTPUT_HTML = 'static/index.html';
+const RECORDS_JSON = 'static/records.json';
 
 function stringify(input /*: Array<any> */) /*: Promise<string> */ {
   return new Promise((resolve, reject) => {
@@ -52,7 +55,13 @@ async function main() {
 
     records.push({
       website,
-      axeStats: axe,
+      axeStats: {
+        violations: axe.violations.map(v => ({
+          kind: v.help,
+          nodeCount: v.nodes.length
+        })),
+        passes: axe.passes.length,
+      },
       issueCount: github.data.total_count
     });
   }
@@ -60,12 +69,27 @@ async function main() {
   fs.writeFileSync(OUTPUT_CSV, await stringify(rows));
   console.log(`Wrote ${OUTPUT_CSV}.`);
 
-  fs.writeFileSync(OUTPUT_HTML, ReactDOMServer.renderToString(
-    React.createElement(Dashboard, {
-      records
+  const dashboardProps = {
+    title: TITLE,
+    records,
+    createdAt: new Date().toISOString()
+  };
+  const appHtml = ReactDOMServer.renderToString(
+    React.createElement(Dashboard, dashboardProps)
+  );
+  const html = '<!DOCTYPE html>' + ReactDOMServer.renderToStaticMarkup(
+    React.createElement(StaticPage, {
+      title: TITLE,
+      id: ELEMENT_ID,
+      html: appHtml
     })
-  ));
+  );
+
+  fs.writeFileSync(OUTPUT_HTML, html);
   console.log(`Wrote ${OUTPUT_HTML}.`);
+
+  fs.writeFileSync(RECORDS_JSON, JSON.stringify(dashboardProps));
+  console.log(`Wrote ${RECORDS_JSON}.`);
 }
 
 if (module.parent === null) {
