@@ -63,6 +63,10 @@ declare class webdriver$WebDriver {
 	navigate(): webdriver$Navigation;
 	manage(): webdriver$Options;
 	executeScript(args: any): webdriver$Thenable;
+
+	// Added by AV on 4/6/2017
+	executeAsyncScript(args: any): any;
+
 	takeScreenshot(): webdriver$Thenable;
 	wait(condition: webdriver$Condition|Function, timeout: ?number, message: ?string): webdriver$Thenable;
 	sleep(ms: number): webdriver$Thenable;

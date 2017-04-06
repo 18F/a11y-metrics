@@ -190,10 +190,6 @@ axe-core@^2.1.7:
   version "2.1.7"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-2.1.7.tgz#4f66f2b3ee3b58ec2d3db4339dd124c5b33b79c3"
 
-axe-webdriverjs@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/axe-webdriverjs/-/axe-webdriverjs-0.5.0.tgz#8e314941f0642001d4802d812dc833b580a008ce"
-
 babel-code-frame@^6.22.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-6.22.0.tgz#027620bee567a88c32561574e7fd0801d33118e4"
