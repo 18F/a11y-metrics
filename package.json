@@ -27,6 +27,6 @@
     "copy:vendor": "mkdir -p static/vendor/uswds && cp -R node_modules/uswds/dist/* static/vendor/uswds/",
     "flow:watch": "flow-watch --ignore node_modules/ -e js,jsx --watch '*.jsx' --watch '*.js' --watch .flowconfig",
     "build": "yarn copy:vendor && node stats.js && webpack",
-    "test": "yarn ensure-records-json && jest && flow"
+    "test": "yarn ensure-records-json && jest --verbose && flow"
   }
 }

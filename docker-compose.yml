@@ -16,11 +16,9 @@ services:
       - HOST_USER=a11y_user
       - USER_OWNED_DIRS=/app/node_modules
   selenium:
-    image: selenium/standalone-chrome:3.2.0
-    volumes:
-      - /dev/shm:/dev/shm
-    ports:
-      - 4444:4444
+    extends:
+      file: docker-services.yml
+      service: selenium
 volumes:
   node_modules:
   home:

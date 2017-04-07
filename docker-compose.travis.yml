@@ -1,0 +1,6 @@
+version: '2.1'
+services:
+  selenium:
+    extends:
+      file: docker-services.yml
+      service: selenium
