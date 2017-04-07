@@ -20,8 +20,7 @@ script:
   - yarn test
   - flow stop
   - echo "Travis event type is $TRAVIS_EVENT_TYPE"
-  # TODO: Change event type we're testing against from "push" to "cron".
-  - if [[ "$TRAVIS_EVENT_TYPE" = "push" ]]; then yarn build && bash travis-deploy.sh; fi
+  - if [[ "$TRAVIS_EVENT_TYPE" = "cron" ]]; then yarn build && bash travis-deploy.sh; fi
 env:
   global:
     - ENABLE_INTERNET_TESTS=yup

@@ -11129,11 +11129,15 @@ module.exports = {
 			"axeStats": {
 				"violations": [
 					{
+						"kind": "Page must have means to bypass repeated blocks",
+						"nodeCount": 1
+					},
+					{
 						"kind": "Links must have discernible text",
 						"nodeCount": 1
 					}
 				],
-				"passes": 14
+				"passes": 12
 			},
 			"issueCount": 2
 		},
@@ -11197,7 +11201,7 @@ module.exports = {
 			"issueCount": 7
 		}
 	],
-	"createdAt": "2017-04-07T14:34:18.518Z"
+	"createdAt": "2017-04-07T14:41:29.987Z"
 };
 
 /***/ }),
