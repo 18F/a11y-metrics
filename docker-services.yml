@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2'
 services:
   selenium:
     image: selenium/standalone-chrome:3.2.0
