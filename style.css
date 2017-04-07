@@ -1,0 +1,37 @@
+@import url(./vendor/uswds/css/uswds.min.css);
+
+html {
+  padding: 0 2em;
+}
+
+.sortable {
+  display: flex;
+  align-items: center;
+}
+
+.sortable > .sort-toggler {
+  flex: 1;
+}
+
+.sort-toggler button,
+.sort-toggler button:hover,
+.sort-toggler button:active {
+  background: inherit;
+  color: inherit;
+  text-decoration: underline;
+  padding: 0;
+  text-align: left;
+}
+
+.sortable > span.sort-indicator {
+  min-width: 1em;
+  text-align: right;
+}
+
+.sortable > span.sort-indicator[data-is-sorted="true"]:after {
+  content: '↑';
+}
+
+.sortable > span.sort-indicator[data-is-sorted="true"][data-is-descending="true"]:after {
+  content: '↓';
+}
