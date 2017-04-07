@@ -1,0 +1,22 @@
+branches:
+  except:
+    - static-site
+language: node_js
+node_js:
+  - "7"
+cache: yarn
+addons:
+  apt:
+    packages:
+      - ocaml
+      - libelf-dev
+sudo: required
+services:
+  - docker
+before_install:
+  - docker-compose -f docker-compose.travis.yml up -d
+env:
+  global:
+    - ENABLE_INTERNET_TESTS=yup
+    - SELENIUM_REMOTE_URL=http://localhost:4444/wd/hub
+    - SELENIUM_BROWSER=chrome
