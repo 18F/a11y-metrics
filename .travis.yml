@@ -15,8 +15,14 @@ services:
   - docker
 before_install:
   - docker-compose -f docker-compose.travis.yml up -d
+script:
+  - yarn test
+  - echo "Travis event type is $TRAVIS_EVENT_TYPE"
+  # TODO: Change event type we're testing against from "push" to "cron".
+  - if [[ "$TRAVIS_EVENT_TYPE" = "push" ]]; then yarn build && bash travis-deploy.sh; fi
 env:
   global:
     - ENABLE_INTERNET_TESTS=yup
     - SELENIUM_REMOTE_URL=http://localhost:4444/wd/hub
     - SELENIUM_BROWSER=chrome
+    - secure: "QiG9F18miRg5NmPHngudfh1MtPH0yWiCpMBob0NbGbbrtTvTeudbF6jd/V67Lt+AEOz5A/cpDJ7WScuieQQDuIqNyAFSul2Fsd0AxYOa/EyKoWvTyaoFa6gYTp/ENsJBSOPe/11Ca8XeHF9LQ7F+NX15WmdJOTBucrNfzibXS/DwwIeNPq+mxvQ2SRdTBTYgl4J/7xcW07iB7f/AEPkGn5QVg07xcbbtdNCxytyPTxVyhNSOIQUG1wCnx1bM9pXPshNYKwa94xTZU128b2i9MLStlpNvwEvPOOX8E4ayh0UwmrRq9irV6YIbgSeY1JcMdnLLQvBXakKgJuAsPIqhPGTBMxWwSLop81flT9GcJIXj0shFZGyDlkfRMkHlRHz9HhqA0ccE0THCoHSx86skSR38cOEbkmuxX4xJQOmODMsGYANyUXz8kBIldkbPy5FUsaHGj3UWRBacqf/V7O4u9LhwaXRuQoWt3JSjv3xs9opMUvPtIoWThzMTXSXmh+QD4R2OD9fYfYPV3/Y60S+jAfvhtfy8xGSLWcgsi95/j880SriW3XgZIgDkPS1JJNI72e8qWkkkgOrXSdt1nU/Yq5LmVoDThICdvCVZOeKI/uG+IsOe9nFFBs2fwnFeAmgQ5E/NK3Guwwy136QPOb83AKTyCjnuObmirolVd7Ayr6w="

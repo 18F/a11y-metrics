@@ -1,6 +1,7 @@
 cache/
 jest/
 node_modules/
+static/.travis.yml
 static/vendor/
 static/index.html
 static/bundle.js
