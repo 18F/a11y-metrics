@@ -1,3 +1,6 @@
+branches:
+  except:
+    - static-site
 language: node_js
 node_js:
   - "7"
