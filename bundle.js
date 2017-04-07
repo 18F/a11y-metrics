@@ -11197,7 +11197,7 @@ module.exports = {
 			"issueCount": 7
 		}
 	],
-	"createdAt": "2017-04-07T14:23:07.566Z"
+	"createdAt": "2017-04-07T14:34:18.518Z"
 };
 
 /***/ }),

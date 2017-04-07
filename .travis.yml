@@ -16,7 +16,9 @@ services:
 before_install:
   - docker-compose -f docker-compose.travis.yml up -d
 script:
+  - flow start
   - yarn test
+  - flow stop
   - echo "Travis event type is $TRAVIS_EVENT_TYPE"
   # TODO: Change event type we're testing against from "push" to "cron".
   - if [[ "$TRAVIS_EVENT_TYPE" = "push" ]]; then yarn build && bash travis-deploy.sh; fi
