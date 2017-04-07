@@ -49,6 +49,10 @@ declare class webdriver$Builder {
 	constructor(): this;
 	withCapabilities(capabilities: webdriver$Capabilities): this;
 	forBrowser(name: string, opt_version?: string, opt_platform?: string): this;
+
+	// Added by AV on 4/7/2017
+	usingServer(url: string): this;
+
 	build(): webdriver$WebDriver;
 }
 
