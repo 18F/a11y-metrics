@@ -5,6 +5,7 @@ const {
   SELENIUM_REMOTE_URL,
   SELENIUM_BROWSER
 } = require('../lib/config');
+const getWebdriver = require('../lib/webdriver');
 const getAxeStats = require('../lib/axe-stats');
 
 describe('getAxeStats()', () => {
@@ -16,7 +17,9 @@ describe('getAxeStats()', () => {
   jasmine.DEFAULT_TIMEOUT_INTERVAL = 15000;
 
   internetIt('works on sites w/ CSP like github.com', async () => {
-    const s = await getAxeStats('https://github.com/18F/a11y-metrics');
+    const d = await getWebdriver();
+    const s = await getAxeStats(d, 'https://github.com/18F/a11y-metrics');
     expect(s.url).toBe('https://github.com/18F/a11y-metrics');
+    await d.quit();
   });
 });

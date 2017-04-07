@@ -10,6 +10,7 @@ const ReactDOMServer = require('react-dom/server');
 const getAxeStats = require('./lib/axe-stats');
 const getGithubStats = require('./lib/github-stats');
 const getWebsites = require('./lib/websites');
+const getWebdriver = require('./lib/webdriver');
 const Dashboard = require('./lib/components/dashboard');
 const StaticPage = require('./lib/components/static-page');
 
@@ -40,10 +41,11 @@ async function main() {
   const records = [];
 
   const websites = await getWebsites();
+  const driver = await getWebdriver();
 
   for (let website of websites) {
     const github = await getGithubStats(website.repo);
-    const axe = await getAxeStats(website.homepage);
+    const axe = await getAxeStats(driver, website.homepage);
 
     rows.push([
       website.homepage,
@@ -65,6 +67,8 @@ async function main() {
       issueCount: github.data.total_count
     });
   }
+
+  await driver.quit();
 
   fs.writeFileSync(OUTPUT_CSV, await stringify(rows));
   console.log(`Wrote ${OUTPUT_CSV}.`);
