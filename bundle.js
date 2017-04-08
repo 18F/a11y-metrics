@@ -10681,11 +10681,15 @@ module.exports = {
 				"violations": [
 					{
 						"kind": "ARIA attributes must conform to valid values",
-						"nodeCount": 1
+						"nodeCount": 5
 					},
 					{
 						"kind": "Elements must have sufficient color contrast",
 						"nodeCount": 55
+					},
+					{
+						"kind": "id attribute value must be unique",
+						"nodeCount": 1
 					},
 					{
 						"kind": "Form elements must have labels",
@@ -10694,6 +10698,10 @@ module.exports = {
 					{
 						"kind": "Zooming and scaling must not be disabled",
 						"nodeCount": 1
+					},
+					{
+						"kind": "Elements should not have tabindex greater than zero",
+						"nodeCount": 3
 					}
 				],
 				"passes": 23
@@ -10717,8 +10725,13 @@ module.exports = {
 				"repo": "18F/dashboard"
 			},
 			"axeStats": {
-				"violations": [],
-				"passes": 18
+				"violations": [
+					{
+						"kind": "Links must have discernible text",
+						"nodeCount": 1
+					}
+				],
+				"passes": 20
 			},
 			"issueCount": 3
 		},
@@ -11026,11 +11039,15 @@ module.exports = {
 				"violations": [
 					{
 						"kind": "ARIA attributes must conform to valid values",
-						"nodeCount": 1
+						"nodeCount": 5
 					},
 					{
 						"kind": "Elements must have sufficient color contrast",
 						"nodeCount": 55
+					},
+					{
+						"kind": "id attribute value must be unique",
+						"nodeCount": 1
 					},
 					{
 						"kind": "Form elements must have labels",
@@ -11039,6 +11056,10 @@ module.exports = {
 					{
 						"kind": "Zooming and scaling must not be disabled",
 						"nodeCount": 1
+					},
+					{
+						"kind": "Elements should not have tabindex greater than zero",
+						"nodeCount": 3
 					}
 				],
 				"passes": 23
@@ -11201,7 +11222,7 @@ module.exports = {
 			"issueCount": 7
 		}
 	],
-	"createdAt": "2017-04-07T14:41:29.987Z"
+	"createdAt": "2017-04-08T14:42:20.743Z"
 };
 
 /***/ }),
