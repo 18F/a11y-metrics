@@ -3,6 +3,7 @@ jest/
 node_modules/
 static/.travis.yml
 static/vendor/
+static/stats.csv
 static/index.html
 static/bundle.js
 static/records.json

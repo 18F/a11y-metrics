@@ -2,7 +2,7 @@
 
 const React = require('react');
 
-const { ORG, QUERY } = require('../config');
+const { ORG, QUERY, CSV_FILENAME, JSON_FILENAME } = require('../config');
 
 class Preamble extends React.Component {
   /*::
@@ -34,6 +34,9 @@ class Preamble extends React.Component {
             For more detailed information, please visit the project's homepage using the <a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">aXe Chrome plugin</a>.
           </li>
         </ul>
+        <p>
+          You can also download the information in this dashboard as <a href={CSV_FILENAME}>CSV</a> or <a href={JSON_FILENAME}>JSON</a>.
+        </p>
         <p>
           If you have any other questions or concerns, feel free to file a <a href="https://github.com/18F/a11y-metrics/issues">GitHub issue</a>!
         </p>

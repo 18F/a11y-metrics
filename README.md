@@ -13,8 +13,8 @@ docker-compose run app yarn
 docker-compose run app yarn build
 ```
 
-This will output [`stats.csv`](stats.csv) and `static/index.html`, as
-well as an accompanying JS bundle for progressive enhancement.
+This will output the website at `static/index.html`, including an
+accompanying JS bundle for progressive enhancement.
 
 ## Adding new 18F projects to track
 

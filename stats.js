@@ -14,10 +14,11 @@ const getWebdriver = require('./lib/webdriver');
 const Dashboard = require('./lib/components/dashboard');
 const StaticPage = require('./lib/components/static-page');
 
-const { TITLE, ELEMENT_ID } = require('./lib/config');
-const OUTPUT_CSV = 'stats.csv';
+const config = require('./lib/config');
+
+const OUTPUT_CSV = `static/${config.CSV_FILENAME}`;
 const OUTPUT_HTML = 'static/index.html';
-const RECORDS_JSON = 'static/records.json';
+const RECORDS_JSON = `static/${config.JSON_FILENAME}`;
 
 function stringify(input /*: Array<any> */) /*: Promise<string> */ {
   return new Promise((resolve, reject) => {
@@ -74,7 +75,7 @@ async function main() {
   console.log(`Wrote ${OUTPUT_CSV}.`);
 
   const dashboardProps = {
-    title: TITLE,
+    title: config.TITLE,
     records,
     createdAt: new Date().toISOString()
   };
@@ -83,8 +84,8 @@ async function main() {
   );
   const html = '<!DOCTYPE html>' + ReactDOMServer.renderToStaticMarkup(
     React.createElement(StaticPage, {
-      title: TITLE,
-      id: ELEMENT_ID,
+      title: config.TITLE,
+      id: config.ELEMENT_ID,
       html: appHtml
     })
   );
