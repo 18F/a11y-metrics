@@ -90,19 +90,16 @@ reported by Flow.
 For quick feedback on Flow's type checking, consider running
 `docker-compose run app yarn flow:watch`.
 
-## Browser development
-
-To automatically rebuild the browser-side JS bundle whenever you
-change the source, run `docker-compose run app webpack --watch`.
-
 ## Deployment
 
-Currently deployment is done via the
-[cloud.gov staticfiles buildpack][cg-static]. You can deploy the site
-by running `cf push`.
+Deployment is currently done by a [Travis cron job][] which rebuilds the
+dashboard on a daily basis and pushes the new site to the `static-site`
+branch. This push is then detected by [Federalist][], which re-deploys
+the live site.
 
 [Docker]: https://docker.com/
 [flow]: https://flowtype.org/en/docs/types/comments/
 [Jest]: http://facebook.github.io/jest/
-[cg-static]: https://cloud.gov/docs/apps/static/
 [`lib/config.js`]: lib/config.js
+[Travis cron job]: https://docs.travis-ci.com/user/cron-jobs/
+[Federalist]: https://federalist.18f.gov/
