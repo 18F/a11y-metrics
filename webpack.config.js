@@ -1,4 +1,9 @@
+// @flow
+
+const path = require('path');
 const webpack = require('webpack');
+
+const { JS_FILENAME } = require('./lib/config');
 
 module.exports = {
   entry: './lib/browser-main.js',
@@ -25,6 +30,8 @@ module.exports = {
     ],
   },
   output: {
-    filename: './static/bundle.js'
+    path: path.resolve(__dirname, 'static'),
+    filename: JS_FILENAME,
+    publicPath: '/'
   }
 };

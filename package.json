@@ -14,7 +14,8 @@
     "selenium-webdriver": "^3.3.0",
     "slugify": "^1.1.0",
     "uswds": "^1.0.0",
-    "webpack": "^2.3.3"
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
   },
   "devDependencies": {
     "flow-bin": "^0.42.0",
@@ -23,10 +24,9 @@
     "jest": "^19.0.2"
   },
   "scripts": {
-    "ensure-records-json": "if [ ! -e ./static/records.json ]; then echo '[]' > ./static/records.json; fi",
     "copy:vendor": "mkdir -p static/vendor/uswds && cp -R node_modules/uswds/dist/* static/vendor/uswds/",
     "flow:watch": "flow-watch --ignore node_modules/ -e js,jsx --watch '*.jsx' --watch '*.js' --watch .flowconfig",
     "build": "yarn copy:vendor && node stats.js && webpack",
-    "test": "yarn ensure-records-json && jest --verbose && flow"
+    "test": "jest --verbose && flow"
   }
 }

@@ -2,6 +2,8 @@
 
 const React = require('react');
 
+const { JS_FILENAME } = require('../config');
+
 class StaticPage extends React.Component {
   /*::
   props: {
@@ -26,7 +28,7 @@ class StaticPage extends React.Component {
         </head>
         <body>
           <div id={this.props.id} dangerouslySetInnerHTML={html}></div>
-          <script src="bundle.js"></script>
+          <script src={JS_FILENAME}></script>
         </body>
       </html>
     );

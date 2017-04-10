@@ -13,8 +13,36 @@ docker-compose run app yarn
 docker-compose run app yarn build
 ```
 
-This will output the website at `static/index.html`, including an
+This will output the static website at `static/`, including an
 accompanying JS bundle for progressive enhancement.
+
+## Developing the front-end
+
+To develop the front-end, run:
+
+```
+docker-compose up
+```
+
+Then visit `http://localhost:8080/` (or the same port on your Docker host)
+in your browser.
+
+Note that the front-end currently only regenerates its JS bundle when you
+edit files; it does not regenerate `index.html`, which means that you
+may see a warning in your console with a message like this:
+
+```
+React attempted to reuse markup in a container but the checksum was invalid.
+```
+
+Manually re-building the static site should get rid of this warning; if
+it *doesn't*, however, then you've got a problem. Consider delaying any
+functionality requiring JS (or specific browser features) until the
+React app is mounted in the DOM, so that the initial render of the app
+is identical to the static render present in `index.html`.
+
+To quickly see what the dashboard looks like without JavaScript enabled,
+add `nojs=on` to the querystring, e.g. `http://localhost:8080/?nojs=on`.
 
 ## Adding new 18F projects to track
 
