@@ -61,6 +61,7 @@ async function main() {
       axeStats: {
         violations: axe.violations.map(v => ({
           kind: v.help,
+          helpUrl: v.helpUrl,
           nodeCount: v.nodes.length
         })),
         passes: axe.passes.length,

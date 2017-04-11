@@ -16,11 +16,14 @@ const {
 import type {Website} from '../websites';
 import type {TableSort, TableSortConfig} from './history-sync';
 
+export type BasicAxeViolation = {
+  kind: string;
+  nodeCount: number;
+  helpUrl: string;
+};
+
 type BasicAxeStats = {
-  violations: Array<{
-    kind: string,
-    nodeCount: number
-  }>;
+  violations: Array<BasicAxeViolation>;
   passes: number;
 };
 

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getAxeViolationStats() matches snapshot 1`] = `
+Array [
+  Object {
+    "count": 2,
+    "helpUrl": "https://info/bar",
+    "name": "bar",
+  },
+  Object {
+    "count": 2,
+    "helpUrl": "https://info/foo",
+    "name": "foo",
+  },
+  Object {
+    "count": 1,
+    "helpUrl": "https://info/baz",
+    "name": "baz",
+  },
+]
+`;

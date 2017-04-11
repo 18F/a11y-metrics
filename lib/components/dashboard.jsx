@@ -10,6 +10,7 @@ const {
 } = require('./history-sync');
 const Preamble = require('./preamble');
 const Table = require('./table');
+const { AxeViolations } = require('./axe-violations');
 
 /*::
 import type {Record} from './table';
@@ -60,11 +61,14 @@ class Dashboard extends React.Component {
                      onChange={this.handleSortChange} />
         <h1>{this.props.title}</h1>
         <Preamble createdAt={this.props.createdAt} />
+        <h2>Per-project statistics</h2>
         <Table sortBy={this.state.sortBy}
                isDescending={this.state.isDescending}
                onSortChange={this.handleSortChange}
                isEnhanced={this.state.mounted}
                records={this.props.records} />
+        <h2>Top aXe violations</h2>
+        <AxeViolations records={this.props.records} />
       </div>
     );
   }
