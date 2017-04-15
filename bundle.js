@@ -4602,7 +4602,7 @@ exports.MIN_OPEN_ISSUES = 20;
 
 // The minimum number of stars that a repository SHOULD have to
 // be considered interesting.
-exports.MIN_STARS = 30;
+exports.MIN_STARS = 10;
 
 // The minimum year in which the most recent push to a repository MUST
 // have been made for it to be considered interesting.
@@ -4619,7 +4619,7 @@ exports.REPO_BLACKLIST = [
 exports.HOMEPAGE_RE_BLACKLIST = [
 // Aside from not being useful to analyze from an accessibility standpoint,
 // we have trouble crawling these sites.
-/^https?:\/\/github\.com\//, /^https?:\/\/rubygems\.org\//,
+/^https?:\/\/github\.com\//, /^https?:\/\/rubygems\.org\//, /^https?:\/\/www\.npmjs\.com\//,
 
 // Ignore homepages that just point to blog posts.
 /^https?:\/\/18f\.gsa\.gov\/20\d\d\//];
