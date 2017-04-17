@@ -1,5 +1,29 @@
 @import url(./vendor/uswds/css/uswds.min.css);
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details ul {
+  font-size: 1rem;
+}
+
+summary:after {
+  float: right;
+  font-family: monospace;
+  content: "+";
+  cursor: pointer;
+  color: #0071bc;
+}
+
+details[open] summary:after {
+  content: "-";
+}
+
+td.axe-violations {
+  width: 10em;
+}
+
 html {
   padding: 0 2em;
 }

@@ -34,6 +34,24 @@ export type Record = {
 };
 */
 
+function AxeViolationsCell(props /*: { violations: Array<BasicAxeViolation> } */) {
+  if (props.violations.length === 0) {
+    return <span>{props.violations.length}</span>;
+  }
+  return (
+    <details>
+      <summary>{props.violations.length}</summary>
+      <ul>
+        {props.violations.map(v => (
+          <li key={v.kind}>
+            {v.kind} ({v.nodeCount} {v.nodeCount === 1 ? 'node' : 'nodes'})
+          </li>
+        ))}
+      </ul>
+    </details>
+  );
+}
+
 class Row extends React.Component {
   /*::
   props: {
@@ -50,16 +68,15 @@ class Row extends React.Component {
     const repoUrl = `https://github.com/${repo}`;
     const q = encodeURIComponent(QUERY);
     const issuesUrl = `https://github.com/${repo}/search?q=${q}&type=Issues`;
-    const violationTip = this.props.axeStats.violations.map(v => (
-      v.nodeCount === 1 ? v.kind : `${v.kind} (${v.nodeCount} nodes)`
-    )).join(', ');
 
     return (
       <tr>
         <td><a href={homepage}>{shortHomepage}</a></td>
         <td><a href={repoUrl}>{repo}</a></td>
         <td><a href={issuesUrl}>{this.props.issueCount}</a></td>
-        <td title={violationTip}>{this.props.axeStats.violations.length}</td>
+        <td className="axe-violations">
+          <AxeViolationsCell violations={this.props.axeStats.violations}/>
+        </td>
         <td>{this.props.axeStats.passes}</td>
       </tr>
     );
