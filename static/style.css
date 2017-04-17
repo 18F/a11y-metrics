@@ -6,6 +6,7 @@ details summary::-webkit-details-marker {
 
 details ul {
   font-size: 1rem;
+  margin-bottom: 0;
 }
 
 summary:after {
@@ -22,6 +23,10 @@ details[open] summary:after {
 
 td.axe-violations {
   width: 10em;
+}
+
+td.axe-violations aside {
+  color: crimson;
 }
 
 html {

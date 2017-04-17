@@ -44,7 +44,8 @@ function AxeViolationsCell(props /*: { violations: Array<BasicAxeViolation> } */
       <ul>
         {props.violations.map(v => (
           <li key={v.kind}>
-            {v.kind} ({v.nodeCount} {v.nodeCount === 1 ? 'node' : 'nodes'})
+            {v.kind}
+            {v.nodeCount > 1 ? <aside>{v.nodeCount} elements</aside> : null}
           </li>
         ))}
       </ul>
