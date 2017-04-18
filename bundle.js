@@ -10994,6 +10994,42 @@ export type Record = {
 };
 */
 
+function AxeViolationsCell(props /*: { violations: Array<BasicAxeViolation> } */) {
+  if (props.violations.length === 0) {
+    return React.createElement(
+      'span',
+      null,
+      props.violations.length
+    );
+  }
+  return React.createElement(
+    'details',
+    null,
+    React.createElement(
+      'summary',
+      null,
+      props.violations.length
+    ),
+    React.createElement(
+      'ul',
+      null,
+      props.violations.map(function (v) {
+        return React.createElement(
+          'li',
+          { key: v.kind },
+          v.kind,
+          v.nodeCount > 1 ? React.createElement(
+            'aside',
+            null,
+            v.nodeCount,
+            ' elements'
+          ) : null
+        );
+      })
+    )
+  );
+}
+
 var Row = function (_React$Component) {
   _inherits(Row, _React$Component);
 
@@ -11021,9 +11057,6 @@ var Row = function (_React$Component) {
       var repoUrl = 'https://github.com/' + repo;
       var q = encodeURIComponent(QUERY);
       var issuesUrl = 'https://github.com/' + repo + '/search?q=' + q + '&type=Issues';
-      var violationTip = this.props.axeStats.violations.map(function (v) {
-        return v.nodeCount === 1 ? v.kind : v.kind + ' (' + v.nodeCount + ' nodes)';
-      }).join(', ');
 
       return React.createElement(
         'tr',
@@ -11057,8 +11090,8 @@ var Row = function (_React$Component) {
         ),
         React.createElement(
           'td',
-          { title: violationTip },
-          this.props.axeStats.violations.length
+          { className: 'axe-violations' },
+          React.createElement(AxeViolationsCell, { violations: this.props.axeStats.violations })
         ),
         React.createElement(
           'td',
