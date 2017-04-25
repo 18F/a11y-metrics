@@ -10,7 +10,7 @@ https://beta.fec.gov,18F/FEC,8,5,23
 https://api.open.fec.gov/developers,18F/openFEC,15,0,5
 https://18f.gsa.gov/dashboard,18F/dashboard,3,1,20
 https://pages.18f.gov/frontend/,18F/frontend,6,1,19
-https://beta.fec.gov/data,18F/openFEC-web-app,26,2,23
+https://beta.fec.gov/data,18F/openFEC-web-app,28,2,23
 https://calc.gsa.gov/,18F/calc,28,2,31
 https://analytics.usa.gov,18F/analytics.usa.gov,3,0,22
 https://pages.18f.gov/before-you-ship/,18F/before-you-ship,2,0,22
@@ -30,15 +30,15 @@ https://pages.18f.gov,18F/pages,2,2,17
 https://pages.18f.gov/joining-18f/,18F/joining-18f,1,0,22
 https://pages.18f.gov/lean-product-design/,18F/lean-product-design,0,0,18
 https://everykidinapark.gov,18F/ekip-api,2,1,14
-https://standards.usa.gov,18F/web-design-standards,200,0,23
+https://standards.usa.gov,18F/web-design-standards,201,0,23
 https://federalist.18f.gov/,18F/federalist,1,1,23
 https://pages.18f.gov/ads-bpa,18F/ads-bpa,0,1,20
 https://standards.usa.gov,18F/web-design-standards-assets,1,0,23
 https://pages.18f.gov/content-guide/,18F/content-guide,4,1,19
 https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,1,10
 https://pages.18f.gov/open-source-guide/,18F/open-source-guide,2,0,18
-https://pages.18f.gov/fec-style/,18F/fec-style,11,1,21
-https://beta.fec.gov,18F/fec-cms,17,5,23
+https://fec-style.18f.gov/,18F/fec-style,12,1,21
+https://beta.fec.gov,18F/fec-cms,18,5,23
 https://atf-eregs.app.cloud.gov/,18F/atf-eregs,4,0,21
 https://pages.18f.gov/brand/,18F/brand,3,0,22
 https://micropurchase.18f.gov,18F/micropurchase,6,1,18
