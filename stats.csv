@@ -6,7 +6,7 @@ https://pages.18f.gov/API-All-the-X,18F/API-All-the-X,1,2,19
 https://cap.18f.gov,18F/C2,2,0,14
 https://useiti.doi.gov/,18F/doi-extractives-data,33,4,23
 https://discovery.gsa.gov/,18F/discovery,2,3,25
-https://beta.fec.gov,18F/FEC,8,4,23
+https://beta.fec.gov,18F/FEC,8,2,23
 https://api.open.fec.gov/developers,18F/openFEC,15,0,5
 https://18f.gsa.gov/dashboard,18F/dashboard,3,1,20
 https://frontend.18f.gov/,18F/frontend,6,1,20
@@ -35,12 +35,12 @@ https://federalist.18f.gov/,18F/federalist,1,1,23
 https://pages.18f.gov/ads-bpa,18F/ads-bpa,0,1,20
 https://standards.usa.gov,18F/web-design-standards-assets,1,0,23
 https://pages.18f.gov/content-guide/,18F/content-guide,4,1,19
-https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,1,10
+https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,0,5
 https://pages.18f.gov/open-source-guide/,18F/open-source-guide,2,0,18
 https://fec-style.18f.gov/,18F/fec-style,12,1,21
-https://beta.fec.gov,18F/fec-cms,18,4,23
+https://beta.fec.gov,18F/fec-cms,18,2,23
 https://atf-eregs.app.cloud.gov/,18F/atf-eregs,4,0,21
-https://pages.18f.gov/brand/,18F/brand,3,0,22
+https://brand.18f.gov,18F/brand,3,0,22
 https://micropurchase.18f.gov,18F/micropurchase,6,1,18
 https://compliance.cloud.gov,18F/cg-compliance,1,5,19
 https://beta.fec.gov/regulations/,18F/fec-eregs,0,0,23
@@ -54,5 +54,5 @@ https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,1,9
 https://standards.usa.gov,18F/web-design-standards-docs,18,0,23
 https://handbook.18f.gov,18F/handbook,0,1,18
 https://federalist-proxy.app.cloud.gov/site/18f/18franklin/,18F/18franklin,0,2,9
-https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,9,3,0
+https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,9,2,1
 https://standards.usa.gov,18F/uswds-jekyll,0,0,23
