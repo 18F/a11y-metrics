@@ -5,7 +5,7 @@ https://18f.gsa.gov,18F/18f.gsa.gov,93,1,20
 https://pages.18f.gov/API-All-the-X,18F/API-All-the-X,1,2,19
 https://cap.18f.gov,18F/C2,2,0,14
 https://useiti.doi.gov/,18F/doi-extractives-data,33,4,23
-https://discovery.gsa.gov/,18F/discovery,2,5,25
+https://discovery.gsa.gov/,18F/discovery,2,3,25
 https://beta.fec.gov,18F/FEC,8,2,23
 https://api.open.fec.gov/developers,18F/openFEC,15,0,5
 https://18f.gsa.gov/dashboard,18F/dashboard,3,1,20
@@ -13,7 +13,7 @@ https://frontend.18f.gov/,18F/frontend,6,1,20
 https://beta.fec.gov/data,18F/openFEC-web-app,30,2,23
 https://calc.gsa.gov/,18F/calc,28,2,31
 https://analytics.usa.gov,18F/analytics.usa.gov,3,0,22
-https://pages.18f.gov/before-you-ship/,18F/before-you-ship,2,0,22
+https://pages.18f.gov/before-you-ship/,18F/before-you-ship,2,0,24
 http://pages.18f.gov/automated-testing-playbook,18F/automated-testing-playbook,0,0,18
 https://cloud.gov,18F/cg-site,4,0,20
 https://pages.18f.gov/accessibility/,18F/accessibility,119,0,19
@@ -46,7 +46,7 @@ https://compliance.cloud.gov,18F/cg-compliance,1,5,19
 https://beta.fec.gov/regulations/,18F/fec-eregs,0,0,23
 https://checklistomania.app.cloud.gov/,18F/checklistomania,0,1,7
 https://pages.18f.gov/product-guide/,18F/product-guide,0,0,22
-https://ci.cloud.gov/pipelines/zap,18F/concourse-compliance-testing,2,2,12
+https://ci.cloud.gov/pipelines/zap,18F/concourse-compliance-testing,2,1,14
 https://styleguide.fr.cloud.gov,18F/cg-style,9,2,13
 https://labs.usa.gov/,18F/ffd-microsite,1,0,18
 https://vote.gov/,18F/vote-gov,3,1,24
@@ -54,5 +54,5 @@ https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,1,9
 https://standards.usa.gov,18F/web-design-standards-docs,18,0,23
 https://handbook.18f.gov,18F/handbook,0,1,18
 https://federalist-proxy.app.cloud.gov/site/18f/18franklin/,18F/18franklin,0,2,9
-https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,9,2,1
+https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,9,3,0
 https://standards.usa.gov,18F/uswds-jekyll,0,0,23
