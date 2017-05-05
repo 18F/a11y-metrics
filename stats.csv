@@ -5,7 +5,7 @@ https://18f.gsa.gov,18F/18f.gsa.gov,93,1,20
 https://pages.18f.gov/API-All-the-X,18F/API-All-the-X,1,2,19
 https://cap.18f.gov,18F/C2,2,0,14
 https://useiti.doi.gov/,18F/doi-extractives-data,33,4,23
-https://discovery.gsa.gov/,18F/discovery,2,3,25
+https://discovery.gsa.gov/,18F/discovery,2,5,25
 https://beta.fec.gov,18F/FEC,8,2,23
 https://api.open.fec.gov/developers,18F/openFEC,15,0,5
 https://18f.gsa.gov/dashboard,18F/dashboard,3,1,20
@@ -21,7 +21,7 @@ https://pages.18f.gov/agile/,18F/agile,0,1,18
 http://pages.18f.gov/guides,18F/guides,7,2,17
 https://pages.18f.gov/api-program/,18F/api-program,0,2,16
 https://pages.18f.gov/testing-cookbook/,18F/testing-cookbook,0,0,22
-https://pulse.cio.gov,18F/pulse,144,2,18
+https://pulse.cio.gov,18F/pulse,145,2,18
 https://continua11y.18f.gov,18F/continua11y,1,2,1
 https://pages.18f.gov/slides/,18F/slides,0,1,14
 https://pages.18f.gov/guides-template/,18F/guides-template,3,0,22
@@ -35,7 +35,7 @@ https://federalist.18f.gov/,18F/federalist,1,1,23
 https://pages.18f.gov/ads-bpa,18F/ads-bpa,0,1,20
 https://standards.usa.gov,18F/web-design-standards-assets,1,0,23
 https://pages.18f.gov/content-guide/,18F/content-guide,4,1,19
-https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,0,5
+https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,1,10
 https://pages.18f.gov/open-source-guide/,18F/open-source-guide,2,0,18
 https://fec-style.18f.gov/,18F/fec-style,12,1,21
 https://beta.fec.gov,18F/fec-cms,18,2,23
@@ -50,7 +50,7 @@ https://ci.cloud.gov/pipelines/zap,18F/concourse-compliance-testing,2,1,14
 https://styleguide.fr.cloud.gov,18F/cg-style,9,2,13
 https://labs.usa.gov/,18F/ffd-microsite,1,0,18
 https://vote.gov/,18F/vote-gov,3,1,24
-https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,1,9
+https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,3,24
 https://standards.usa.gov,18F/web-design-standards-docs,18,0,23
 https://handbook.18f.gov,18F/handbook,0,1,18
 https://federalist-proxy.app.cloud.gov/site/18f/18franklin/,18F/18franklin,0,2,9
