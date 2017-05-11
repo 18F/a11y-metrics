@@ -35,7 +35,7 @@ https://federalist.18f.gov/,18F/federalist,1,1,23
 https://pages.18f.gov/ads-bpa,18F/ads-bpa,0,1,20
 https://standards.usa.gov,18F/web-design-standards-assets,1,0,23
 https://pages.18f.gov/content-guide/,18F/content-guide,4,1,19
-https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,1,10
+https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,0,5
 https://pages.18f.gov/open-source-guide/,18F/open-source-guide,2,0,18
 https://fec-style.18f.gov/,18F/fec-style,12,1,21
 https://beta.fec.gov,18F/fec-cms,18,2,23
@@ -46,12 +46,12 @@ https://compliance.cloud.gov,18F/cg-compliance,1,5,19
 https://beta.fec.gov/regulations/,18F/fec-eregs,0,0,23
 https://checklistomania.app.cloud.gov/,18F/checklistomania,0,1,7
 https://pages.18f.gov/product-guide/,18F/product-guide,0,0,22
-https://ci.cloud.gov/pipelines/zap,18F/concourse-compliance-testing,2,1,14
+https://ci.cloud.gov/pipelines/zap,18F/concourse-compliance-testing,2,2,12
 https://styleguide.fr.cloud.gov,18F/cg-style,9,2,13
 https://labs.usa.gov/,18F/ffd-microsite,1,0,18
 https://vote.gov/,18F/vote-gov,3,1,24
-https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,3,26
-https://standards.usa.gov,18F/web-design-standards-docs,21,0,23
+https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,1,9
+https://standards.usa.gov,18F/web-design-standards-docs,23,0,23
 https://handbook.18f.gov,18F/handbook,0,1,18
 https://federalist-proxy.app.cloud.gov/site/18f/18franklin/,18F/18franklin,0,2,9
 https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,9,3,0
