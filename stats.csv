@@ -5,8 +5,8 @@ https://18f.gsa.gov,18F/18f.gsa.gov,93,1,20
 https://pages.18f.gov/API-All-the-X,18F/API-All-the-X,1,2,19
 https://cap.18f.gov,18F/C2,2,0,14
 https://useiti.doi.gov/,18F/doi-extractives-data,33,4,23
-https://discovery.gsa.gov/,18F/discovery,2,3,25
-https://beta.fec.gov,18F/FEC,8,2,23
+https://discovery.gsa.gov/,18F/discovery,2,5,25
+https://www.fec.gov,18F/FEC,8,2,23
 https://api.open.fec.gov/developers,18F/openFEC,15,0,5
 https://18f.gsa.gov/dashboard,18F/dashboard,3,1,20
 https://frontend.18f.gov/,18F/frontend,6,1,20
@@ -16,9 +16,9 @@ https://analytics.usa.gov,18F/analytics.usa.gov,3,0,22
 https://before-you-ship.18f.gov,18F/before-you-ship,2,0,24
 http://pages.18f.gov/automated-testing-playbook,18F/automated-testing-playbook,0,0,21
 https://cloud.gov,18F/cg-site,4,0,20
-https://pages.18f.gov/accessibility/,18F/accessibility,121,0,19
+https://pages.18f.gov/accessibility/,18F/accessibility,122,0,19
 https://pages.18f.gov/agile/,18F/agile,0,1,18
-http://pages.18f.gov/guides,18F/guides,7,1,17
+https://guides.18f.gov,18F/guides,7,1,17
 https://pages.18f.gov/api-program/,18F/api-program,0,2,16
 https://testing-cookbook.18f.gov/,18F/testing-cookbook,0,0,23
 https://pulse.cio.gov,18F/pulse,145,2,18
@@ -43,7 +43,7 @@ https://regulations.atf.gov/,18F/atf-eregs,4,0,21
 https://brand.18f.gov,18F/brand,3,0,22
 https://micropurchase.18f.gov,18F/micropurchase,6,1,18
 https://compliance.cloud.gov,18F/cg-compliance,1,5,19
-https://beta.fec.gov/regulations/,18F/fec-eregs,0,1,3
+https://beta.fec.gov/regulations/,18F/fec-eregs,0,0,23
 https://checklistomania.app.cloud.gov/,18F/checklistomania,0,1,7
 https://pages.18f.gov/product-guide/,18F/product-guide,0,0,22
 https://ci.cloud.gov/pipelines/zap,18F/concourse-compliance-testing,2,1,14
