@@ -1,18 +1,18 @@
 Homepage,GitHub Repository,GitHub issues (open and closed) mentioning accessibility,aXe violations on front page,aXe passes on front page
 https://api.data.gov,18F/api.data.gov,1,1,19
 https://pages.18f.gov/API-Usability-Testing/,18F/API-Usability-Testing,0,1,3
-https://18f.gsa.gov,18F/18f.gsa.gov,93,1,20
+https://18f.gsa.gov,18F/18f.gsa.gov,92,1,20
 https://pages.18f.gov/API-All-the-X,18F/API-All-the-X,1,1,3
 https://cap.18f.gov,18F/C2,2,0,14
-https://useiti.doi.gov/,18F/doi-extractives-data,33,4,23
+https://useiti.doi.gov/,18F/doi-extractives-data,32,4,23
 https://discovery.gsa.gov/,18F/discovery,2,2,19
 https://www.fec.gov,18F/FEC,8,2,23
 https://api.open.fec.gov/developers,18F/openFEC,15,0,5
 https://18f.gsa.gov/dashboard,18F/dashboard,3,1,20
 https://frontend.18f.gov/,18F/frontend,6,1,20
 https://www.fec.gov/data,18F/openFEC-web-app,32,2,23
-https://calc.gsa.gov/,18F/calc,28,2,31
-https://analytics.usa.gov,18F/analytics.usa.gov,3,0,21
+https://calc.gsa.gov/,18F/calc,26,2,31
+https://analytics.usa.gov,18F/analytics.usa.gov,3,0,22
 https://before-you-ship.18f.gov,18F/before-you-ship,2,0,24
 http://pages.18f.gov/automated-testing-playbook,18F/automated-testing-playbook,0,0,21
 https://cloud.gov,18F/cg-site,4,0,20
@@ -21,7 +21,7 @@ https://pages.18f.gov/agile/,18F/agile,0,1,18
 https://guides.18f.gov,18F/guides,7,1,17
 https://pages.18f.gov/api-program/,18F/api-program,0,2,16
 https://testing-cookbook.18f.gov/,18F/testing-cookbook,0,0,23
-https://pulse.cio.gov,18F/pulse,145,2,18
+https://pulse.cio.gov,18F/pulse,144,2,18
 https://continua11y.18f.gov,18F/continua11y,1,2,1
 https://slides.18f.gov,18F/slides,0,1,14
 https://pages.18f.gov/guides-template/,18F/guides-template,3,0,22
@@ -30,8 +30,8 @@ https://pages.18f.gov,18F/pages,2,1,17
 https://pages.18f.gov/joining-18f/,18F/joining-18f,1,0,22
 https://pages.18f.gov/lean-product-design/,18F/lean-product-design,0,0,18
 https://everykidinapark.gov,18F/ekip-api,2,1,14
-https://standards.usa.gov,18F/web-design-standards,204,0,22
-https://federalist.18f.gov/,18F/federalist,1,0,23
+https://standards.usa.gov,18F/web-design-standards,202,0,22
+https://federalist.18f.gov/,18F/federalist,2,0,23
 https://pages.18f.gov/ads-bpa,18F/ads-bpa,0,1,20
 https://standards.usa.gov,18F/web-design-standards-assets,1,0,22
 https://content-guide.18f.gov/,18F/content-guide,6,1,19
@@ -51,7 +51,7 @@ https://styleguide.fr.cloud.gov,18F/cg-style,9,2,13
 https://labs.usa.gov/,18F/ffd-microsite,1,0,18
 https://vote.gov/,18F/vote-gov,3,1,24
 https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,3,24
-https://standards.usa.gov,18F/web-design-standards-docs,24,0,22
+https://standards.usa.gov,18F/web-design-standards-docs,23,0,22
 https://handbook.18f.gov,18F/handbook,0,1,18
 https://federalist-proxy.app.cloud.gov/site/18f/18franklin/,18F/18franklin,0,2,9
 https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,10,3,0
