@@ -23,7 +23,7 @@ https://pages.18f.gov/api-program/,18F/api-program,0,2,16
 https://testing-cookbook.18f.gov/,18F/testing-cookbook,0,0,23
 https://pulse.cio.gov,18F/pulse,144,2,18
 https://continua11y.18f.gov,18F/continua11y,1,2,1
-https://slides.18f.gov,18F/slides,0,1,14
+https://slides.18f.gov,18F/slides,0,1,16
 https://pages.18f.gov/guides-template/,18F/guides-template,3,0,22
 https://methods.18f.gov/,18F/methods,1,1,23
 https://pages.18f.gov,18F/pages,2,1,17
@@ -35,7 +35,7 @@ https://federalist.18f.gov/,18F/federalist,2,0,23
 https://pages.18f.gov/ads-bpa,18F/ads-bpa,0,1,20
 https://standards.usa.gov,18F/web-design-standards-assets,1,0,22
 https://content-guide.18f.gov/,18F/content-guide,6,1,19
-https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,1,10
+https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,0,5
 https://pages.18f.gov/open-source-guide/,18F/open-source-guide,2,0,18
 https://www.fec.gov,18F/fec-cms,19,2,23
 https://contracting-cookbook.18f.gov,18F/contracting-cookbook,0,0,18
@@ -50,9 +50,9 @@ https://ci.cloud.gov/pipelines/zap,18F/concourse-compliance-testing,2,2,12
 https://styleguide.fr.cloud.gov,18F/cg-style,9,2,13
 https://labs.usa.gov/,18F/ffd-microsite,1,0,18
 https://vote.gov/,18F/vote-gov,3,1,24
-https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,3,24
+https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,1,9
 https://standards.usa.gov,18F/web-design-standards-docs,23,0,22
 https://handbook.18f.gov,18F/handbook,0,1,18
 https://federalist-proxy.app.cloud.gov/site/18f/18franklin/,18F/18franklin,0,2,9
-https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,10,3,0
+https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,10,2,0
 https://standards.usa.gov,18F/uswds-jekyll,0,0,22
