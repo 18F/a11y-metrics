@@ -35,7 +35,7 @@ https://federalist.18f.gov/,18F/federalist,2,0,23
 https://pages.18f.gov/ads-bpa,18F/ads-bpa,0,1,20
 https://standards.usa.gov,18F/web-design-standards-assets,1,0,22
 https://content-guide.18f.gov/,18F/content-guide,6,1,19
-https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,1,10
+https://dashboard.fr.cloud.gov,18F/cg-dashboard,19,0,5
 https://pages.18f.gov/open-source-guide/,18F/open-source-guide,2,0,18
 https://www.fec.gov,18F/fec-cms,19,2,23
 https://contracting-cookbook.18f.gov,18F/contracting-cookbook,0,0,18
@@ -51,10 +51,10 @@ https://styleguide.fr.cloud.gov,18F/cg-style,9,2,13
 https://labs.usa.gov/,18F/ffd-microsite,1,0,18
 https://hub.docker.com/r/18fgsa/s3-resource-simple/,18F/s3-resource-simple,0,5,17
 https://vote.gov/,18F/vote-gov,3,1,24
-https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,3,24
-https://standards.usa.gov,18F/web-design-standards-docs,24,0,22
+https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,1,9
+https://standards.usa.gov,18F/web-design-standards-docs,25,0,22
 https://handbook.18f.gov,18F/handbook,0,1,18
 https://federalist-proxy.app.cloud.gov/site/18f/18franklin/,18F/18franklin,0,2,9
-https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,13,3,0
+https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,13,2,1
 https://standards.usa.gov,18F/uswds-jekyll,0,0,22
-https://federalist.fr.cloud.gov/preview/18f/nsf-sbir/dev/,18F/nsf-sbir,7,2,0
+https://federalist.fr.cloud.gov/preview/18f/nsf-sbir/dev/,18F/nsf-sbir,7,0,22
