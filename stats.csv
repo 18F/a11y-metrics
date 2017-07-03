@@ -10,7 +10,7 @@ https://www.fec.gov,18F/FEC,8,2,23
 https://api.open.fec.gov/developers,18F/openFEC,15,0,5
 https://18f.gsa.gov/dashboard,18F/dashboard,3,1,20
 https://frontend.18f.gov/,18F/frontend,6,1,20
-https://www.fec.gov/data,18F/openFEC-web-app,32,1,3
+https://www.fec.gov/data,18F/openFEC-web-app,32,2,23
 https://calc.gsa.gov/,18F/calc,26,2,31
 https://analytics.usa.gov,18F/analytics.usa.gov,3,0,22
 https://before-you-ship.18f.gov,18F/before-you-ship,2,0,24
@@ -43,7 +43,7 @@ https://regulations.atf.gov/,18F/atf-eregs,4,0,21
 https://brand.18f.gov,18F/brand,3,0,22
 https://micropurchase.18f.gov,18F/micropurchase,6,1,18
 https://compliance.cloud.gov,18F/cg-compliance,1,2,13
-https://www.fec.gov/regulations/,18F/fec-eregs,0,1,23
+https://www.fec.gov/regulations/,18F/fec-eregs,0,0,23
 https://checklistomania.app.cloud.gov/,18F/checklistomania,0,1,7
 https://pages.18f.gov/product-guide/,18F/product-guide,0,0,22
 https://ci.cloud.gov/pipelines/zap,18F/concourse-compliance-testing,2,2,13
