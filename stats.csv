@@ -12,7 +12,7 @@ https://18f.gsa.gov/dashboard,18F/dashboard,3,1,20
 https://frontend.18f.gov/,18F/frontend,6,1,20
 https://www.fec.gov/data,18F/openFEC-web-app,32,2,23
 https://calc.gsa.gov/,18F/calc,26,2,31
-https://analytics.usa.gov,18F/analytics.usa.gov,3,0,21
+https://analytics.usa.gov,18F/analytics.usa.gov,3,0,22
 https://before-you-ship.18f.gov,18F/before-you-ship,2,0,24
 http://pages.18f.gov/automated-testing-playbook,18F/automated-testing-playbook,0,0,21
 https://cloud.gov,18F/cg-site,4,0,20
@@ -51,7 +51,7 @@ https://styleguide.fr.cloud.gov,18F/cg-style,9,2,13
 https://labs.usa.gov/,18F/ffd-microsite,1,0,18
 https://hub.docker.com/r/18fgsa/s3-resource-simple/,18F/s3-resource-simple,0,5,17
 https://vote.gov/,18F/vote-gov,3,1,24
-https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,3,24
+https://marketplace.fedramp.gov,18F/fedramp-dashboard,2,3,26
 https://standards.usa.gov,18F/web-design-standards-docs,29,0,22
 https://handbook.18f.gov,18F/handbook,0,1,18
 https://federalist-proxy.app.cloud.gov/site/18f/18franklin/,18F/18franklin,0,2,9
