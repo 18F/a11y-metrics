@@ -15,7 +15,7 @@ https://calc.gsa.gov/,18F/calc,26,2,31
 https://analytics.usa.gov,18F/analytics.usa.gov,3,0,22
 https://before-you-ship.18f.gov,18F/before-you-ship,2,0,24
 http://pages.18f.gov/automated-testing-playbook,18F/automated-testing-playbook,0,0,21
-https://cloud.gov,18F/cg-site,4,0,20
+https://cloud.gov,18F/cg-site,5,0,20
 https://pages.18f.gov/accessibility/,18F/accessibility,123,0,19
 https://pages.18f.gov/agile/,18F/agile,0,1,18
 https://guides.18f.gov,18F/guides,7,1,17
@@ -31,7 +31,7 @@ https://pages.18f.gov/joining-18f/,18F/joining-18f,1,0,22
 https://pages.18f.gov/lean-product-design/,18F/lean-product-design,0,0,18
 https://everykidinapark.gov,18F/ekip-api,2,1,14
 https://standards.usa.gov,18F/web-design-standards,223,0,22
-https://federalist.18f.gov/,18F/federalist,4,0,22
+https://federalist.18f.gov/,18F/federalist,4,1,19
 https://pages.18f.gov/ads-bpa,18F/ads-bpa,0,1,20
 https://standards.usa.gov,18F/web-design-standards-assets,1,0,22
 https://content-guide.18f.gov/,18F/content-guide,7,1,19
@@ -59,4 +59,4 @@ https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-frontend,15,3,22
 https://standards.usa.gov,18F/uswds-jekyll,0,0,22
 https://seedfund.nsf.gov,18F/nsf-sbir,11,0,23
 https://crime-data-explorer.fr.cloud.gov/,18F/crime-data-explorer,7,3,22
-https://foia-dot-gov.app.cloud.gov/,18F/foia,0,1,23
+https://foia-dot-gov.app.cloud.gov/,18F/foia,0,0,23
