@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/node:7.10
+    # workaround to not being able to use Docker volumes
+    # https://discuss.circleci.com/t/connecting-to-containers-started-with-docker-compose/9190/5?u=afeld
+    machine: true
     # working_directory: ~/repo
     environment:
       - ENABLE_INTERNET_TESTS: yup
@@ -11,7 +12,14 @@ jobs:
 
     steps:
       - checkout
-      - setup_remote_docker
+
+      - run:
+          name: Add Yarn package repository
+          # https://yarnpkg.com/en/docs/install#linux-tab
+          command: |
+            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+      - run: sudo apt-get update -y && sudo apt-get install -y libelf-dev ocaml yarn
 
       # Download and cache dependencies
       - restore_cache:
@@ -25,7 +33,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: sudo apt-get update -y && sudo apt-get install -y libelf-dev ocaml
       - run: docker-compose -f docker-compose.ci.yml up -d
 
       - run: ./node_modules/.bin/flow start
