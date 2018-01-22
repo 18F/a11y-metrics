@@ -6,7 +6,6 @@ services:
       - .:/app
       - home:/home/
       - node_modules:/app/node_modules/
-    working_dir: /app
     entrypoint: node /app/lib/docker/entrypoint.js
     command: webpack-dev-server --content-base static/ --host 0.0.0.0
     ports:
