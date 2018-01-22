@@ -28,9 +28,9 @@ jobs:
       - run: sudo apt-get update -y && sudo apt-get install -y libelf-dev ocaml
       - run: docker-compose -f docker-compose.ci.yml up -d
 
-      - run: flow start
+      - run: ./node_modules/.bin/flow start
       - run: yarn test
-      - run: flow stop
+      - run: ./node_modules/.bin/flow stop
       - run: echo "Event type is $TRAVIS_EVENT_TYPE"
       # TODO
       # - run: if [[ "$TRAVIS_EVENT_TYPE" = "cron" ]]; then yarn build && bash travis-deploy.sh; fi
