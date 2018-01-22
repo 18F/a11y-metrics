@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/18F/a11y-metrics.svg?branch=master)](https://travis-ci.org/18F/a11y-metrics)
+[![Build Status](https://travis-ci.org/18F/a11y-metrics.svg?branch=master)](https://travis-ci.org/18F/a11y-metrics) [![CircleCI](https://circleci.com/gh/18F/a11y-metrics.svg?style=svg)](https://circleci.com/gh/18F/a11y-metrics)
 
 This is an experiment in obtaining accessibility metrics across all
 18F projects.

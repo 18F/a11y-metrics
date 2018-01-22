@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:7.10
+    # working_directory: ~/repo
+    environment:
+      - ENABLE_INTERNET_TESTS: yup
+      - SELENIUM_REMOTE_URL: http://localhost:4444/wd/hub
+      - SELENIUM_BROWSER: chrome
+
+    steps:
+      - checkout
+      - setup_remote_docker
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: sudo apt-get update -y && sudo apt-get install -y libelf-dev ocaml
+      - run: docker-compose -f docker-compose.ci.yml up -d
+
+      - run: flow start
+      - run: yarn test
+      - run: flow stop
+      - run: echo "Event type is $TRAVIS_EVENT_TYPE"
+      # TODO
+      # - run: if [[ "$TRAVIS_EVENT_TYPE" = "cron" ]]; then yarn build && bash travis-deploy.sh; fi
+
+# TODO exclude static-site branch
